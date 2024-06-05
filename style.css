@@ -9,7 +9,6 @@
     border: 0;
     outline: 0;
     font-family: 'Bree Serif', sans-serif;
-       
 }
 
 html {
@@ -20,7 +19,7 @@ html {
 }
 
 img {
-    max-width: 100%;          
+    max-width: 100%;         
 }
 
 :root {
@@ -33,16 +32,15 @@ img {
     --large-fz: calc(20px + (35 - 20) * ((100vw - 300px) / (1600 - 300)));       
     --medium-fz: calc(14px + (20 - 14) * ((100vw - 300px) / (1600 - 300)));      
     --small-fz: calc(12px + (18 - 12) * ((100vw - 300px) / (1600 - 300)));       
-    --number-icons: calc(25px + (40 - 25) * ((100vw - 300px) / (1600 - 300)));  
+    --number-icons: calc(25px + (40 - 25) * ((100vw - 300px) / (1600 - 300)));   
 }
 
 
 body {
-    
-    --sb-track-color: #d7d7d8;
+    --sb-track-color: #d7d7d8;         
     --sb-thumb-color: #1d418c;      
     --sb-size: 1.2rem;                
-    background: #fff4e3;             
+    background: #fff4e3;          
 }
 
 body::-webkit-scrollbar {             
@@ -59,7 +57,6 @@ body::-webkit-scrollbar-thumb {
     border-radius: 1rem;
 }
 
-
 section {
     padding: 2rem 9%;                    
 }
@@ -72,17 +69,16 @@ section {
     color: var(--green-clr);            
     background-color: var(--white-clr); 
     font-size: var(--medium-fz);        
-    padding: 1rem 3rem;                
+    padding: 1rem 3rem;                 
     box-shadow: var(--box-shadow);      
     cursor: pointer;                    
     transition: 0.3s;                   
 }
 
-.btn:hover {                   
+.btn:hover {                
     background-color: var(--green-clr); 
     color: var(--white-clr);            
 }
-
 
 .heading {              
     margin-bottom: 2.5rem;          
@@ -104,7 +100,7 @@ header {
     background: #f9c80c;            
     width: 100%;
     box-shadow: var(--box-shadow);    
-    display: flex;                     
+    display: flex;                    
     justify-content: space-between;   
     align-items: center;              
     padding: 1rem 9%;                 
@@ -117,21 +113,21 @@ header .logo {
 }
 
 header .logo .fa-tooth {
-    color: var(--white-clr);       
+    color: var(--white-clr);      
     font-size: var(--logo-fz);
 }
 
 header .navbar {
-    display: flex;            
+    display: flex;           
 }
 
 header .navbar li {
-    margin: 0rem 1.5rem;     / 
+    margin: 0rem 1.5rem;      
 }
 
 header .navbar li a {
-    font-size: var(--medium-fz);  
-    color: var(--white-clr1);        
+    font-size: var(--medium-fz);   
+    color: var(--white-clr1);       
     transition: 0.3s;              
     padding: 0.7rem;                
     background:               
@@ -140,7 +136,7 @@ header .navbar li a {
     linear-gradient(#1d418c 0 0) 100% 100%,
     linear-gradient(#1d418c 0 0) 100% 100%;
     background-repeat: no-repeat;                
-    background-size: 1.5rem .2rem, .2rem 1.5rem;  
+    background-size: 1.5rem .2rem, .2rem 1.5rem; 
 }
     
 header .navbar li a:hover {
@@ -154,17 +150,14 @@ header .navbar li a:hover {
     cursor: pointer;                
     border: .1rem solid var(--green-clr);   
     padding: 0.5rem 1.5rem;                 
-    border-radius: 0.5rem;                 
+    border-radius: 0.5rem;           
     display: none;                 
 }
 
 
-
-
-
 .home {
-    margin-top: 7rem;                   
-}
+    margin-top: 7rem; 
+}                      
 .home .row {
     display: flex;
     align-items: center;
@@ -175,16 +168,16 @@ header .navbar li a:hover {
     flex: 1 1 40rem;
     text-align: center;           
 }
-.home .row .content h3 {         
-    margin-bottom: 1rem;            
+.home .row .content h3 {        
+    margin-bottom: 1rem;          
     color: var(--green-clr);       
     font-size: var(--biggest-fz);  
 }
 .home .row .content p {       
-    margin-bottom: 1.5rem;              
+    margin-bottom: 1.5rem;               
     color: var(--green-clr);            
-    font-size: var(--small-fz);          
-    text-align: center;                 
+    font-size: var(--small-fz);         
+    text-align: center;                
 }
 .home .row .content p span {          
     color: var(--green-clr);        
@@ -197,15 +190,18 @@ header .navbar li a:hover {
     border: .5rem solid var(--green-clr); 
     object-fit: cover;                    
 }
+.home .row .content a {
+    text-decoration: underline;
+    color: var(--green-clr);
+}
 
 
 
-
-/* .number .box-container {                   
+.number .box-container {                   
     display: flex;                        
     justify-content: center;               
     align-items: center;                   
-    flex-wrap: wrap;                       
+    flex-wrap: wrap;                      
     gap: 2rem;                             
 }
 .number .box-container .box {              
@@ -216,32 +212,30 @@ header .navbar li a:hover {
     align-items: center;                   
     padding: 2rem;                         
     border-radius: 0.5rem;                 
-    gap: 2rem;                           
+    gap: 2rem;                             
     box-shadow: var(--box-shadow);         
 }
 .number .box-container .box i {                   
-    font-size: var(--number-icons);       
+    font-size: var(--number-icons);      
     color: var(--white-clr);              
 }
-.number .box-container .box .content {           
+.number .box-container .box .content {            
     font-size: var(--medium-fz);          
     color: var(--white-clr);              
-} */
-
-
+}
 
 
 .about {                                 
-    margin-top: 7rem;                    
+    margin-top: 7rem;                   
 }
 .about .row {                            
     display: flex;                       
-    align-items: center;                 
+    align-items: center;                
     flex-wrap: wrap;                     
     gap: 2.5rem;                         
 }
 .about .row .img {
-    flex: 1 1 40rem;                     
+    flex: 1 1 40rem;                    
 }
 .about .row .img img {
     border-radius: 0%;                   
@@ -255,15 +249,12 @@ header .navbar li a:hover {
 }
 .about .row .content h3 {                
     font-size: var(--biggest-fz);        
-    color: var(--green-clr);             
+    color: var(--green-clr);            
 }
-.about .row .content p {                          
-    font-size: var(--small-fz);          
-    margin-bottom: 2rem;                 
+.about .row .content p {                 
+    font-size: var(--small-fz);           
     text-align: center;
 }
-
-
 
 
 .services .slide {                  
@@ -278,34 +269,30 @@ header .navbar li a:hover {
     height: 25rem;            
     border: .5rem solid var(--green-clr);
 }
-.services .slide h4 {              
-    margin: 1.5rem 0rem;      
+.services .slide h4 {             
+    margin: 1.5rem 0rem;       
     font-size: var(--large-fz); 
 }
 .services .slide p {      
     font-size: var(--small-fz);       
-    text-align: justify;             
+    text-align: justify;              
 }
-
 .swiper-pagination-bullet-active {      
     background-color: var(--green-clr) !important;    
 }
 
 
-
-
-.doctors .slide {                        
+.doctors .slide {                       
     width: 30rem;                       
     background-color: var(--white-clr1); 
     border-radius: 0.5rem;              
     text-align: center;                 
     margin-bottom: 4rem;                
     box-shadow: var(--box-shadow);       
-    
 }
 .doctors .slide img {
-    height: 23rem;                       
-    width: 35rem;                        
+    height: 23rem;                      
+    width: 35rem;                       
     object-fit: cover;                   
     border: .5rem solid var(--green-clr);  
 }
@@ -314,16 +301,14 @@ header .navbar li a:hover {
     font-size: var(--large-fz); 
 }
 .doctors .slide p {              
-    font-size: var(--small-fz);   
+    font-size: var(--small-fz);  
     text-align: center;          
-    padding: 1rem;               /
+    padding: 1rem;              
 }
 
 
-
-
 .review .slide {
-    width: 35rem;                       
+    width: 35rem;                      
     border-radius: 0.5rem;              
     background-color: var(--white-clr);  
     padding: 2rem;                       
@@ -336,7 +321,7 @@ header .navbar li a:hover {
     color: var(--green-clr);
 }
 .review .slide p {
-    font-size: var(--small-fz);      
+    font-size: var(--small-fz);           
     color: var(--green-clr);
     text-align: center;
 }
@@ -346,35 +331,32 @@ header .navbar li a:hover {
     text-align: center;
     text-decoration: underline;
 }
-.review .slide .user {        
+.review .slide .user {       
     display: flex;                   
     align-items: center;             
-    gap: 1.5rem;                     
+    gap: 1.5rem;                    
     margin-top: 1.5rem;              
     justify-content: center;
 }
-.review .slide .user img {   
-    width: 7rem;                     
+.review .slide .user img {    
+    width: 7rem;                      
     height: 7rem;                   
     object-fit: cover;              
 }
-.review .slide .user h4 {        
+.review .slide .user h4 {         
     font-size: var(--small-fz);     
 }
 .review .slide .user-info .stars i {  
     font-size: 1.5rem;                      
     color: var(--green-clr);                
-    
 }
-
-
 
 
 .contacts .row {
     display: flex;                      
-    align-items: center;               
-    flex-wrap: wrap;                  
-    gap: 2.5rem;                 
+    align-items: center;                
+    flex-wrap: wrap;                    
+    gap: 2.5rem;                      
 }
 .contacts .row .img {
     flex: 1 1 40rem;    
@@ -387,7 +369,7 @@ header .navbar li a:hover {
     margin: 1rem 0rem 2rem;             
     border-radius: 0.5rem;              
     background-color: var(--white-clr); 
-    font-size: var(--small-fz);          
+    font-size: var(--small-fz);         
     padding: 0.5rem 1rem;       
     text-transform: none;       
 }
@@ -397,18 +379,18 @@ header .navbar li a:hover {
 }
 .contacts .row form span {
     font-size: var(--small-fz);    
-    color: var(--white-clr);           
+    color: var(--green-clr);           
 }
 .contacts .row form .gender {
-    margin: 1rem 0rem 2rem;             
+    margin: 1rem 0rem 2rem;               
 }
 .contacts .row form .gender label {
-    margin-left: 0.2rem;               
-    font-size: var(--small-fz);        
-    color: var(--green-clr);           
+    margin-left: 0.2rem;                
+    font-size: var(--small-fz);          
+    color: var(--green-clr);            
     cursor: pointer;
 }
-.contacts .row form .gender #female {    
+.contacts .row form .gender #female {   
     margin-left: 2rem;                   
 }
 .contacts .row form .gender input {
@@ -446,7 +428,7 @@ footer .share a {
     background-color: var(--white-clr);
     transition: 0.3s;
 }
-ooter .share a:hover {
+footer .share a:hover {
     transform: translateY(-1rem);
     box-shadow: var(--box-shadow);
 }
@@ -456,11 +438,15 @@ hr {
     margin: 2rem 0rem;
 }
 footer .copyright {
-    color: #ddd;
+    color: #e4ad48;
     font-size: var(--medium-fz);
 }
 footer .copyright span {
     color: var(--green-clr);
+}
+footer .copyright a {
+    color: #e4ad48;
+    text-decoration: underline;
 }
 
 
@@ -476,7 +462,7 @@ footer .copyright span {
         display: block;
     }
     header .navbar {
-        position: absolute;    
+        position: absolute;      
         top: 99%;
         left: 0;
         right: 0;
@@ -486,12 +472,11 @@ footer .copyright span {
         flex-direction: column;     
         align-items: center;        
         transition: 0.3s linear;    
-        
         clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);   
         background-color: #222;
     }
     header .navbar li {
-        margin: 2rem;          
+        margin: 2rem;           
     }
     header .navbar.active {
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); 
