@@ -5,43 +5,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GS-Physio Praxis</title>
-    
+
+    <!-- Подключаем CSS custom style link-->
     <link rel="stylesheet" href="style.css">
-  
-   
+
+    <!-- font link  ссылка на шрифт  -->
+    <!-- <link href="https://fonts.googleapis.com/css?family=Sniglet" rel="stylesheet" type="text/css"> -->
     <link href="https://fonts.googleapis.com/css?family=Bree Serif" rel="stylesheet" type="text/css">
-    
+
+    <!-- fontawesome link  потрясающая ссылка  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
- 
+
+    <!-- слайдер в секциях swiperjs link  ссылка на swiperjs свайпер: SwiperJs link: https://swiperjs.com/get-started#use-swiper-from-cdn-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 </head>
 
 <body>
 
+
+<!-- НАЧАЛО раздела header section START-->
 <header>
 
-<a href="#" class="logo">     <img src="img/logo1.png">    </i>die Physiotherapie</a>
+<!-- ЗАГОЛОВОК ЛОГО -->  
+<a href="#" class="logo"> <!-- <i class="fa-solid fa-tooth"> -->    <img src="img/logo1.png">    </i>die Physiotherapie</a>
 
-<div id="menu-btn" class="fas fa-bars"></div>   
+<div id="menu-btn" class="fas fa-bars"></div>   <!-- при адаптации индитификатор меню батон = header ЗАГОЛОВКА -->
 
 <ul class="navbar">
+    <!-- <li><a href="#home">Startseite</a></li> -->
     <li><a href="#home">Willkommen</a></li>
     <li><a href="#about">Über uns</a></li>
     <li><a href="#doctors">Praxis</a></li>
     <li><a href="#services">Leistungen</a></li>
+    <li><a href="#services2">Kursplan</a></li>
+    <li><a href="#doctors2">Team</a></li>
     <li><a href="#review">Kontakt</a></li>
     <li><a href="#contacts">Finden</a></li>
 </ul>
 
 </header>
+<!-- КОНЕЦ раздела header section END-->
 
 
-
+<!-- НАЧАЛО секции домашнего раздела home section START    -->
 <section id="home" class="home">
 
-<div class="row">                
+<div class="row">                <!-- Start    div с классом row-->
 
     <div class="content">
+        <!-- <h3>Dental Plus</h3> -->
         <h3>Herzlich Willkommen</h3>
         <p>Unsere Praxis ist eine Terminpraxis und wir behandeln Patienten und Patientinnen der gesetzlichen Krankenkassen, Privatversicherte und sie als individuellen Kunden.
         Unsere medizinische Tätigkeit umfasst die Behandlung von Krankheitsbildern mit chirurgischem, orthopädischem, neurologischem und onkologischem Hintergrund. Patienten, die an Ödemen erkrankt sind, werden in unserer Praxis nach den international gültigen Leitlinien der "AWMF" und der „Deutschen Gesellschaft für Lymphologie (DGL)“ behandelt.
@@ -49,33 +61,86 @@
         Bei Behandlungen im Rahmen der privaten Krankenversicherungen kommt die Gebührenordnung Therapeuten (GebüTh) zur Anwendung.  Sollten sie Fragen hierzu haben, stehen ihnen weiterführende Informationen unter www.privatpreise.de zur Verfügung.</p>
         <p> <i> <strong> <span>Görgen und Susan Leesch</span> </strong> </i> </p>
         
-        <a href="#about" class="btn">Über uns</a>    
-        <a href="#contacts" class="btn">Finden</a> 
+        <a href="#about" class="btn">Über uns</a>   <!-- START преход на старт--> 
+        <a href="#contacts" class="btn">Finden</a> <!-- Start преход на контакт-->
+        <!-- <a href="#contacts" class="btn">Finden</a> -->
     </div>
 
     <div class="img">
-        <img src="img/happy_clients1.jpg">    
+        <img src="img/happy_clients1.jpg">    <!-- START фото Сюзан Пёрген-->
     </div>
 
 </div>
+
 </section>
+<!-- КОНЕЦ секции домашнего раздела home section END  -->
 
 
-<section id="about" class="about">          
-<div class="row">                           
+<!--  НАЧАЛО секции 4БОКСА number section START  -->
+<section class="number">              <!-- Секция 4БОКСА -->
 
-    <div class="img">                        
-        <img src="img/about_section1.jpg">   
+    <div class="box-container">       <!-- все 4 бокса в секция 4БОКСА -->
+
+        <div class="box">                             <!-- 1йбокс в секция 4БОКСА               -->
+            <!-- <i class="fa-solid fa-user-doctor"></i>   иконка в 1боксе в секция 4БОКСА -->
+            <img src="img/LogoPhysio_doc.png"> 
+            <div class="content">                     <!-- весь текст в 1боксе в секция 4БОКСА -->
+                <h4>5+</h4>                           <!-- заголовок 4типа в 1боксе в секция 4БОКСА -->
+                <p>Physiotherapeuten</p>              <!-- надпись в р параграфе в 1боксе в секция 4БОКСА -->
+            </div>
+        </div>
+
+        <div class="box">                             <!-- 2йбокс в секция 4БОКСА -->
+            <!-- <i class="fa-solid fa-tooth"></i>         иконка в 2боксе в секция 4БОКСА -->
+            <img src="img/LogoPhysio_med.png"> 
+            <div class="content">                     <!-- весь текст в 2боксе в секция 4БОКСА -->
+                <h4>24+</h4>                          <!-- заголовок 4типа в боксе в секция 4БОКСА -->
+                <p>Unsere Leistungen</p>              <!-- надпись в р параграфе в 2боксе в секция 4БОКСА -->
+            </div>
+        </div>
+
+        <div class="box">                             <!-- 3йбокс в секция 4БОКСА -->
+            <!-- <i class="fa-solid fa-thumbs-up"></i>     иконка в 3боксе в секция 4БОКСА -->
+            <img src="img/LogoPhysio_pal.png">
+            <div class="content">                     <!-- весь текст в 3боксе в секция 4БОКСА -->
+                <!-- <h4>100%</h4> -->
+                <h4>22+</h4>                          <!-- заголовок 4типа в 31боксе в секция 4БОКСА -->
+                <p>Jahrelange arbeit</p>              <!-- надпись в р параграфе в боксе в секция 4БОКСА -->
+            </div>
+        </div>
+
+        <div class="box">                              <!-- 4йбокс в секция 4БОКСА -->
+            <!-- <i class="fa-regular fa-face-smile"></i>   иконка в 4боксе в секция 4БОКСА -->
+            <img src="img/LogoPhysio_sma.png">
+            <div class="content">                      <!-- весь текст в 4боксе в секция 4БОКСА -->
+                <h4>1500+</h4>                         <!-- заголовок 4типа в боксе в секция 4БОКСА -->
+                <!-- <p>happy clients</p> -->
+                <p>Zufriedene Kunden</p>               <!-- надпись в р параграфе в 24боксе в секция 4БОКСА -->
+            </div>
+        </div>
+    </div>
+    
+</section>
+<!-- КОНЕЦ секции 4БОКСА number section END  -->
+
+
+<!-- НАЧАЛО секция О НАС Über uns about section START  -->
+<section id="about" class="about">          <!-- Секция с индитификатором О НАС Über uns about -->
+
+<div class="row">                           <!-- div с классом row  -->
+
+    <div class="img">                        <!-- div с классом фото  -->
+        <img src="img/about_section1.jpg">   <!-- ПРАКТИКА фото  -->
     </div>
 
-    <div class="content">                    
-        <h3>Warum uns wählen?</h3>          
+    <div class="content">                   <!-- div с классом текст  --> 
+        <h3>Warum uns wählen?</h3>          <!-- заголовок 3типа --> 
 
         <p>In unserer Physiotherapie- Praxis können Sie eine freundliche Atmosphäre beim Empfang, sowie die zufriedene Stimmung im Team genießen.
         Unsere großzügigen, abgeschlossenen und lichtdurchfluteten Behandlungsräumen laden zum Wohlfühlen und Bewegen ein.
         In unserer Praxis arbeiten Fachleute mit ganz unterschiedlichen Schwerpunkten. Wir sind Spezialisten auf unserem Gebiet, ohne dabei den allgemeinen Hintergrund aus den Augen zu verlieren.
-        Durch unsere unterschiedlichen Interessen und Erfahrungen ergänzen wir uns ideal. Gegenseitige Unterstützung ist für uns selbstverständlich, so dass sie vom geballten Team-Wissen profitieren.
-        So können wir die unterschiedlichsten Probleme und Diagnosen stets zuverlässig und kompetent behandeln, und Sie wissen sich immer in besten Händen.</p>
+        Durch unsere unterschiedlichen Interessen und Erfahrungen ergänzen wir uns ideal. Gegenseitige Unterstützung ist für uns selbstverständlich, so dass Sie vom geballten Team-Wissen profitieren.
+        So können wir die unterschiedlichsten Probleme und Diagnosen stets zuverlässig und kompetent behandeln, und sie wissen sich immer in besten Händen.</p>
 
         <p><b>Unser Ziel ist es , ihre Mobilität wieder herzustellen, sie in Bewegung zu halten und sicherzustellen, dass ihre Rehabilitation effektiv, effizient und stressfrei verläuft.</b></p>
         
@@ -94,111 +159,269 @@
       
         <p><b>Infektionsschutz hat oberste Priorität.  </b> Aus diesem Grunde beachten sie bitte, dass es Patienten mit "Erkältungs- und/ oder Corona bedingten Symptomen" per Gesetz nicht gestattet ist, die Praxisräume zu betreten. Alle Mitarbeiter sind speziell geschult und werden regelmäßig in der Umsetzung der für unseren Berufsstand gültigen „SARS- COV – 2 –Arbeitsschutzstandards" der BGW unterwiesen. Ergänzend und individuell an die Gegebenheiten angepasst, haben wir ein ausführliches Hygienekonzept erarbeitet, welches täglich für Ihre Sicherheit zur Anwendung kommt.</p>
 
-        <a href="#contacts" class="btn">Finden</a>  
+        <a href="#contacts" class="btn">Finden</a>  <!-- кнопка переключения Контакт --> 
 
     </div>
 </div>
 </section>
+<!-- КОНЕЦ секция О НАС Über about section END  -->
 
 
-<section id="doctors" class="doctors">                   
-    <h2 class="heading"> Unsere <span>Praxis</span></h2> 
+<!-- НАЧАЛО секции НАША ПРАКТИКА Unsere Praxis section START  -->
+<section id="doctors" class="doctors">                   <!-- Секция НАША ПРАКТИКА Unsere Praxis doctors section start  -->
 
-    <div class="doctors-slider swiper">                 
+    <h2 class="heading"> Unsere <span>Praxis</span></h2> <!-- Заголовок h2 2типа Секция НАША ПРАКТИКА Unsere Praxis -->
 
-        <div class="wrapper swiper-wrapper">            
+    <div class="doctors-slider swiper">                 <!-- слайдер 6+ штук 2часть секции НАША ПРАКТИКА doctors div с классом "doctors-slider swiper" -->
 
-            <div class="slide swiper-slide">           
-                <img src="img/doc_11.jpg">              
+        <div class="wrapper swiper-wrapper">            <!-- внутри слайдер 6+ штук 2часть секции НАША ПРАКТИКА  doctors -->
+
+            <div class="slide swiper-slide">            <!-- слайдер 1+ штук 2часть секции НАША ПРАКТИКА  doctors -->
+                <img src="img/doc_11.jpg">              <!-- фото внутри слайдера секции НАША ПРАКТИКА  doctors -->           
+                <!-- <h3>Name Surname</h3> -->          <!-- заголовок 3типа внутри слайдера секции НАША ПРАКТИКА  doctors --> 
+                <!-- <p>sergeon</p>                          текст внутри слайдера секции НАША ПРАКТИКА  doctors  -->
             </div>
 
             <div class="slide swiper-slide">
                 <img src="img/doc_21.jpg">
+                <!-- <h3>Name Surname</h3> -->
+                <!-- <p>assistant</p> -->
             </div>
 
             <div class="slide swiper-slide">
                 <img src="img/doc_31.jpg">
+                <!-- <h3>Name Surname</h3> -->
+                <!-- <p>sergeon</p> -->
             </div>
 
             <div class="slide swiper-slide">
                 <img src="img/doc_41.jpg">
+                <!-- <h3>Name Surname</h3> -->
+                <!-- <p>assistant</p> -->
             </div>
 
             <div class="slide swiper-slide">
                 <img src="img/doc_51.jpg">
+                <!-- <h3>Name Surname</h3> -->
+                <!-- <p>sergeon</p> -->
             </div>
 
             <div class="slide swiper-slide">
                 <img src="img/doc_61.jpg">
+                <!-- <h3>Name Surname</h3> -->
+                <!-- <p>assistant</p> -->
             </div>
+
         </div>
 
         <div class="swiper-pagination"></div>
     </div>
 </section>
+<!-- НАЧАЛО секции НАША ПРАКТИКА Unsere Praxis section END  -->
 
 
+<!-- НАЧАЛО секции НАШИ СЕРВИСЫ Unsere Leistungen section START  -->
+<section id="services" class="services">        <!-- Секция с индитификатором НАШИ СЕРВИСЫ services -->      
 
+<h2 class="heading">Unsere <span> Leistungen</span></h2>   <!-- заголовок 2типа плюсспан 1часть секции НАШИ СЕРВИСЫ services --> 
 
-<section id="services" class="services">             
-<h2 class="heading">Unsere <span> Leistungen</span></h2>   
+<div class="services-slider swiper">            <!-- слайдер 6+ штук 2часть секции НАШИ СЕРВИСЫ services div с классом "services-slider swiper" -->
 
-<div class="services-slider swiper">            
+    <div class="wrapper swiper-wrapper">        <!-- слайдер 1+ штук 2часть секции НАШИ СЕРВИСЫ services --> 
 
-    <div class="wrapper swiper-wrapper">        
-
-        <div class="slide swiper-slide">        
-            <img src="img/dental-care1.jpg">    
+        <div class="slide swiper-slide">        <!-- слайд внутри слайда 2часть секции services -->
+            <img src="img/dental-care1.jpg">    <!-- фото внутри слайда -->
+            <!-- <h4>Manuelle Therapie (MT)</h4>     заголовок 4типа -->
+            <!-- <p>Manuelle Therapie (MT)</p> текст внутри слайда -->
         </div>
 
         <div class="slide swiper-slide">
             <img src="img/oral_surgery1.jpg">
+            <!-- <h4>Manuelle Lymphdrainage</h4> -->
+            <!-- <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo consectetur debitis possimus eligendi odio veniam!</p> -->
         </div>
 
         <div class="slide swiper-slide">
             <img src="img/dental-implant1.jpg">
+            <!-- <h4>Klassische Massage (KMT)</h4> -->
+            <!-- <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo consectetur debitis possimus eligendi odio veniam!</p> -->
         </div>
 
         <div class="slide swiper-slide">
             <img src="img/dental-crown1.jpg">
+            <!-- <h4>crowns</h4> -->
+            <!-- <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo consectetur debitis possimus eligendi odio veniam!</p> -->
         </div>
 
         <div class="slide swiper-slide">
             <img src="img/emergency_care1.jpg">
+            <!-- <h4>emergency care</h4> -->
+            <!-- <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo consectetur debitis possimus eligendi odio veniam!</p> -->
         </div>
 
         <div class="slide swiper-slide">
             <img src="img/dental-protection1.jpg">
+            <!-- <h4>caries protect</h4> -->
+            <!-- <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo consectetur debitis possimus eligendi odio veniam!</p> -->
         </div>
 
     </div>
 
-    <div class="swiper-pagination"></div>   
+    <div class="swiper-pagination"></div>   <!-- кнопочки для пеевода слайдов секции НАШИ ПРОЦЕДУРЫ services -->
 </div>
 </section>
+<!-- КОНЕЦ секции НАШИ СЕРВИСЫ Unsere Leistungen section END  -->
+
+
+<!-- НАЧАЛО1 секции НАШ КУРСПЛАН1 Unser Kursplan section START  -->
+<!-- <section id="services1" class="services1">             
+  <h2 class="heading">Unser <span> Kursplan</span></h2>   
+  
+  <div class="services1-slider swiper">            
+      <div class="wrapper swiper-wrapper">        
+  
+          <div class="slide swiper-slide">      
+            <img src="img/kursplan_1.jpg" alt="">  
+          </div>
+          <div class="slide swiper-slide">
+            <img src="img/kursplan_2.jpg" alt="">
+          </div>
+          <div class="slide swiper-slide">
+            <img src="img/kursplan_3.jpg" alt="">
+          </div>
+          <div class="slide swiper-slide">
+            <img src="img/kursplan_4.jpg" alt="">
+          </div>
+          <div class="slide swiper-slide">
+            <img src="img/kursplan_5.jpg" alt="">
+          </div>
+  
+          <div class="slide swiper-slide">
+            <img src="img/kursplan_1.jpg" alt="">
+          </div>
+
+      </div>
+  
+      <div class="swiper-pagination"></div>   
+  </div>
+  </section> -->
+<!-- КОНЕЦ1 секции НАШ КУРСПЛАН1 Unser Kursplan section END  -->
 
 
 
 
+<!-- НАЧАЛО2 секции НАШ КУРСПЛАН2 Unser Kursplan section start  -->
+<section id="services2" class="services2">  
+  <h2 class="heading">Unser <span> Kursplan</span></h2> 
+  <!-- <p>assistant</p> -->
+  <div class="kursplan">
+      
+    <div class="img-container">
+
+      <div class="img">
+        <img src="img/kursplan_1.jpg" alt="">
+      </div>
+
+      <div class="img">
+        <img src="img/kursplan_2.jpg" alt="">
+      </div>
+
+      <div class="img">
+        <img src="img/kursplan_3.jpg" alt="">
+      </div>
+
+      <div class="img">
+        <img src="img/kursplan_4.jpg" alt="">
+      </div>
+
+      <div class="img">
+        <img src="img/kursplan_5.jpg" alt="">
+      </div>
+    </div> 
+
+    <div class="pop-up">
+      <span>&times;</span>
+      <img src="img/kursplan_5.jpg" alt="">
+    </div>
+
+  </div> 
+</section>
+  <!-- КОНЕЦ2 секции НАШ КУРСПЛАН2 Unser Kursplan section end  -->
 
 
-<section id="review" class="review">       
-    <h2 class="heading"> Unsere <span> Kontakte</span></h2>    
+<!-- НАЧАЛО2 секции Unser Team2 doctors section start  -->
+<section id="doctors2" class="doctors2">
 
-    <div class="review-slider swiper">                        
+    <h2 class="heading"> Unser <span>Team</span></h2>
+    
 
-        <div class="wrapper swiper-wrapper">                
+    <div class="doctors2-slider swiper">
 
-            <div class="slide swiper-slide">                
+        <div class="wrapper swiper-wrapper">
+
+            <div class="slide swiper-slide">
+                <img src="img/Görgen.jpg">
+                <h3>LEESCH Görgen </h3> 
+                <!-- <p>sergeon</p> -->
+            </div>
+
+            <div class="slide swiper-slide">
+                <img src="img/Susan2.jpg">
+                <h3>LEESCH Susan</h3>
+                <!-- <p>assistant</p> -->
+            </div>
+
+            <div class="slide swiper-slide">
+                <img src="img/Lina.jpg">
+                <h3>GRULICH Lina</h3>
+                <!-- <p>sergeon</p> -->
+            </div>
+
+            <div class="slide swiper-slide">
+                <img src="img/doc_4.jpg">
+                <h3>BOAS Fröhlich</h3>
+                <!-- <p>assistant</p> -->
+            </div>
+
+            <div class="slide swiper-slide">
+                <img src="img/doc_5.jpg">
+                <h3>Name Surname</h3>
+                <!-- <p>sergeon</p> -->
+            </div>
+
+            <div class="slide swiper-slide">
+                <img src="img/doc_6.jpg">
+                <h3>Name Surname</h3>
+                <!-- <p>assistant</p> -->
+            </div>
+        </div>
+
+        <div class="swiper-pagination">
+        </div>
+    </div>
+</section>
+<!-- КОНЕЦ2 секции Unser Team2 doctors section end  -->
+
+
+<!-- НАЧАЛО секции НАШ ОБЗОР review section start  -->
+<section id="review" class="review">       <!-- создадим секцию с индетификатором "review" с классом "review" -->
+
+    <h2 class="heading"> Unsere <span> Kontakte</span></h2>    <!--внутри заголовок 2типа с классом "heading" плюс спан -->
+
+    <div class="review-slider swiper">                        <!--внутри 6+слайдер с классом "review-slider" -->
+
+        <div class="wrapper swiper-wrapper">                 <!-- оболочка 1+слайда с классом "wrapper" -->
+
+            <div class="slide swiper-slide">                 <!-- содержание 1+слайда с классом "slide" -->
                 <h4>Standort</h4>
-                <p><a href="https://maps.app.goo.gl/dTkcY9qoxNspLUGS6" target="_blank" >Albert-Schweitzer-Straße 24</a></p>   
+                <p><a href="https://maps.app.goo.gl/dTkcY9qoxNspLUGS6" target="_blank" >Albert-Schweitzer-Straße 24</a></p>   <!-- внутри ссылка и текст 1+слайда  -->
                 <p>18147 Rostock Toitenwinkel</p>
-                <div class="user">   
-                    
-                    <div class="user-info">                                     
-                       
-                        <div class="stars">                     
-                            <i class="fas fa-star"></i>                   
+                <div class="user">   <!-- внутри пользователь 1+слайда  -->
+                    <!-- <img src="img/user_1.jpg">                                  где фотопользователя -->
+                    <div class="user-info">                                     <!-- где инфопользователя  -->
+                        <!-- <h4>Name Alex</h4>                      заголовок 4типа  имяпользователя  -->
+                        <div class="stars">                     <!-- где оценкапользователя  -->
+                            <i class="fas fa-star"></i>                   <!-- где 5+иконка оценки -->
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -214,9 +437,9 @@
                 
                 <p>tel. +49 01512 4299152</p>
                 <div class="user">
-                    
+                    <!-- <img src="img/user_2.jpg"> -->
                     <div class="user-info">
-                        
+                        <!-- <h4>Name Surname</h4> -->
                         <div class="stars">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -231,11 +454,12 @@
             <div class="slide swiper-slide">
                 <h4>Öffnungszeiten</h4>
                 <p>Montag - Donnerstag    08.00 - 18.00 Uhr</p>
-                <p>Freitag   08.00 - 14.00 Uhr  </p>
+                <p>Freitag    08.00 - 14.00 Uhr</p>
+                <!-- <p>Samstag & Sonntag    Geschlossen  </p> -->
                 <div class="user">
-                    
+                    <!-- <img src="img/user_3.jpg"> -->
                     <div class="user-info">
-                        
+                        <!-- <h4>Name Surname</h4> -->
                         <div class="stars">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -253,7 +477,7 @@
                 <p>E-Mail:  gs-physio@leesch.de</p>
                 <P>Interneet: gs-physio.leesch.de</P>
                 <div class="user">
-                    
+                    <!-- <img src="img/user_4.jpg"> -->
                     <div class="user-info">
                         
                         <div class="stars">
@@ -271,9 +495,9 @@
                 <h4>Bewertungen</h4>
                 <p><a href="https://www.google.com/search?sca_esv=4771c1dce5b9df5f&hl=de-DE&tbm=lcl&sxsrf=ADLYWIIYwy49M4MY4JhuYKVenJyBx5yWqQ:1715612160595&q=GS-Physio+Praxis+f%C3%BCr+Physiotherapie+Rezensionen&rflfq=1&num=20&stick=H4sIAAAAAAAAAONgkxIyMjczMDExNDUxMTM2NzM1NDTZwMj4itHAPVg3IKOyODNfIaAosSKzWCHt8J4iBYhQSUZqUWJBZqpCUGpVah5QIC81bxEryVoAziFmnX8AAAA&rldimm=276044154463765114&sa=X&ved=2ahUKEwiZ-52r8YqGAxV40QIHHdP0AC4Q9fQKegQIGBAF&cshid=1715612261057842&biw=1920&bih=898&dpr=1#lkt=LocalPoiReviews" target="_blank" rel="noreferrer noopener">Was Patienten über unsere Praxis zu sagen haben</a></p>
                 <div class="user">
-                    
+                    <!-- <img src="img/user_5.jpg"> -->
                     <div class="user-info">
-                        
+                        <!-- <h4>Name Surname</h4> -->
                         <div class="stars">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -289,9 +513,9 @@
                 <h4>Name</h4>
                 <p></p>
                 <div class="user">
-                    
+                    <!-- <img src="img/user_6.jpg"> -->
                     <div class="user-info">
-                        
+                        <!-- <h4>Name Surname</h4> -->
                         <div class="stars">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -302,51 +526,76 @@
                     </div>
                 </div>
             </div>
+
         </div>
 
         <div class="swiper-pagination"></div>
-        
     </div>
 </section>
+<!-- Конец секции НАШ ОБЗОР review section end  -->
 
 
-<section id="contacts" class="contacts">                          
+<!-- Начало секции КАК С НАМИ СВЯЗАТЬСЯ contacts section start  -->
+<section id="contacts" class="contacts">                          <!-- создадим секцию с индетификатором "contacts" с классом "contacts" -->
 
+    <!--внутри встроеный заголовок 2типа с классом "heading" плюс спан -->
     <h2 class="heading"><span>Verbinde dich</span> mit uns</h2>   
+    <!-- <p>Wir sind innerhalb der Öffungszeiten errreichbar</p> -->
 
+    <!-- внутри блок с классом "row"строка таблица  -->
     <div class="row">         
 
+        <!-- добавим изображение на страницу  -->
         <div class="img">              
-            <img src="img/form_img1.jpg">   
+            <img src="img/form_img1.jpg">   <!-- изображение на странице  -->
         </div>
         
-        
-        <form action="https://api.web3forms.com/submit" method="POST">   
-              
-            <input type="hidden" name="access_key" value="55fdfafe-8897-4f4a-a1bc-0774cec0a873">     
+        <!-- web3forms.com -->
+        <form action="https://api.web3forms.com/submit" method="POST">   <!-- форма для заполнения инфо на сервер   https://web3forms.com/platforms/html-contact-form     -->
+            <!-- <h3 class="heading ">Contact Us</h3> -->
 
+            <!-- <input type="hidden" name="access_key" value="Enter_your_access_key_from_web3forms"> -->  
+            <input type="hidden" name="access_key" value="83147f72-cb0a-4fb5-8270-471d80ee3c35">     <!-- ключ доступа -->
+
+            <!-- создаем поле Имя пользователя -->
             <span>dein Name, Vorname</span>     
-            <input type="text" class="box" required placeholder="" maxlength="50" name="name" autocomplete="off">  
+            <input type="text" class="box" required placeholder="eingeben Ihr Name.." maxlength="50" name="name" autocomplete="off">  <!-- создаем поле для ввода имени пользователя с подсказкой-->
 
+            <!-- содаем поле e-mail пользователя -->
             <span>deine E-Mail-Adresse</span>    
-            <input type="email" class="box" required placeholder="" maxlength="50" name="email" autocomplete="off">  
+            <input type="email" class="box" required placeholder="eingeben your email.." maxlength="50" name="email" autocomplete="off">  <!-- создаем поле для ввода e-mail пользователя с подсказкой-->
 
+            <!-- создаем поле номер телефона пользователя -->
             <span>deine Telefonnummer</span>  
-            <input type="number" name="number" class="box" required placeholder="" max="99999999999999" min="0">  
+            <input type="number" name="telefon" class="box" required placeholder="geben Sie Ihre Telefonnummer ein.." max="99999999999999" min="0">  <!-- создаем поле для ввода номера телефона пользователя -->
 
+            <!-- созаем поле сообщение пользователя -->
             <span>dein Anligen</span> 
-            <textarea class="box" name="message" cols="30" rows="10" required placeholder=""></textarea>  
+            <textarea class="box" name="message" cols="30" rows="10" required placeholder="eingeben Ihre Meinung.."></textarea>  <!--  создаем многострочное поле ввода сообщения пользователя с подсказкой -->
 
-            <input type="submit" value="Nachricht senden" class="btn" name="send">  
+            <!-- создаем поле гендер -->
+            <!-- <span>Wähle Geschlecht</span>   
+            <div class="gender">
+                <input type="radio" name="gender" id="male" value="männlich">
+                <label for="male">männlich</label>
 
+                <input type="radio" name="gender" id="female" value="weiblich">
+                <label for="female">weiblich</label>
+            </div>     -->
+
+            <!-- Кнопка отправить сообщение -->
+            <input type="submit" value="Nachricht senden" class="btn" name="send">  <!-- создаем поле для кнопки отправить сназванием -->
+
+            </div>
         </form>
     </div>
 </section>
+<!-- Конец секции КАК С НАМИ СВЯЗАТЬСЯcontacts section end  -->
 
 
-
-
+<!-- Начало секции footer section start  -->
 <footer class="footer">
+
     <section>
 
         <div class="share">
@@ -356,96 +605,200 @@
             <a href="#" class="fab fa-youtube"></a>
             <a href="#" class="fab fa-linkedin"></a>
         </div>
-        <hr>
 
+        <hr>
+        <!-- <div class="copyright">&copy; copyright 2024 by <span>Coding With UisMax</span> || all rights reserved</div> -->
         <div class="copyright">&copy;2024 All rights Reserved <span>GS-Physio Praxis Görgen und Susan Leesch</span> || <a href="page.html" target="_blank">Impressum & Datenschutz</a></div>
 
     </section>
 </footer>
+<!-- Конец секции footer section end  -->
+
+
+  <!-- НАЧАЛО блок секции с классом scroll top btn section start  -->
+  <div class="scroll-top">
+    <i class="fa fa-arrow-up"></i>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="100%"
+      height="100%"
+      viewBox="-1 -1 102 102"
+    >
+      <path
+        d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"
+        style="
+          stroke-dasharray: 307.919, 307.919;
+          stroke-dashoffset: 0.0228267;
+          transition: stroke-dashoffset 10ms linear;
+        "
+      />
+    </svg>
+  </div>
+  <!-- КОНЕЦ блок секции с классом scroll top btn section end -->
+
+    <!-- НАЧАЛО секции ПЕРЕЗАГРУЗКА loader start -->
+  <div class="loader-container">
+    <img src="img/love.gif" />
+  </div>
+    <!--    loader етв  -->
 
 
 
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>   
+      <!-- Библиотек JavaSkript  jQuery link JS  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
 
-<script>
-    var swiper = new Swiper(".services-slider", {
-        spaceBetween: 20,
-        grabCursor: true,            
-        loop: true,                               
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-      breakpoints: {
-        540: {
-          slidesPerView: 1,
-        },
-        768: {
-          slidesPerView: 2,
-        },
-        1024: {
-          slidesPerView: 3,
-        },
-      },
-    });
-</script>
 
-<script>
-    var swiper = new Swiper(".doctors-slider", {
-        spaceBetween: 20,
-        grabCursor: true,
-        loop: true,
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-      breakpoints: {
-        540: {
-          slidesPerView: 1,
-        },
-        768: {
-          slidesPerView: 2,
-        },
-        1024: {
-          slidesPerView: 3,
-        },
-      },
-    });
-</script>
+      <!-- swiperjs script   слайдер в секциях swiperjs link  ссылка на swiperjs свайпер: SwiperJs link: https://swiperjs.com/get-started#use-swiper-from-cdn-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>   
+      <!-- слайдер секции НАШИ ПРОЦЕДУРЫ  -->
 
-<script>
-    var swiper = new Swiper(".review-slider", {
-        spaceBetween: 20,
-        grabCursor: true,
-        loop: true,
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-      breakpoints: {
-        540: {
-          slidesPerView: 1,
-        },
-        768: {
-          slidesPerView: 2,
-        },
-        1024: {
-          slidesPerView: 3,
-        },
-      },
-    });
-  </script>
 
-<script>
-let menu = document.querySelector('#menu-btn');   
-let navbar = document.querySelector('.navbar');   
+    <!--Слайдер для каждой секции Initialize Swiper -->
 
-menu.onclick = () => {                      
-    menu.classList.toggle('fa-times');      
-    navbar.classList.toggle('active');      
+    <!-- секции НАШИ СЕРВИСЫ Unsere Leistungen -->
+    <script>
+        var swiper = new Swiper(".services-slider", {
+            spaceBetween: 20,
+            grabCursor: true,            
+            loop: true,                               
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+          breakpoints: {
+            540: {
+              slidesPerView: 1,
+            },
+            768: {
+              slidesPerView: 2,
+            },
+            1024: {
+              slidesPerView: 3,
+            },
+          },
+        });
+    </script>
+
+    <!-- секции НАШ КУРСПЛАН1 Unser Kursplan -->
+    <script>
+      var swiper = new Swiper(".services1-slider", {
+          spaceBetween: 20,
+          grabCursor: true,            
+          loop: true,                               
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        breakpoints: {
+          540: {
+            slidesPerView: 1,
+          },
+          768: {
+            slidesPerView: 2,
+          },
+          1024: {
+            slidesPerView: 5,
+          },
+        },
+      });
+    </script>
+
+    <!-- секции НАША ПРАКТИКА Unsere Praxis -->
+    <script>
+        var swiper = new Swiper(".doctors-slider", {
+            spaceBetween: 20,
+            grabCursor: true,
+            loop: true,
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+          breakpoints: {
+            540: {
+              slidesPerView: 1,
+            },
+            768: {
+              slidesPerView: 2,
+            },
+            1024: {
+              slidesPerView: 3,
+            },
+          },
+        });
+    </script>
+    <script>
+      var swiper = new Swiper(".doctors2-slider", {
+          spaceBetween: 20,
+          grabCursor: true,
+          loop: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        breakpoints: {
+          540: {
+            slidesPerView: 1,
+          },
+          768: {
+            slidesPerView: 2,
+          },
+          1024: {
+            slidesPerView: 4,
+          },
+        },
+      });
+    </script>
+
+    <script>
+      var swiper = new Swiper(".review-slider", {
+          spaceBetween: 20,
+          grabCursor: true,
+          loop: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        breakpoints: {
+          540: {
+            slidesPerView: 1,
+          },
+          768: {
+            slidesPerView: 2,
+          },
+          1024: {
+            slidesPerView: 3,
+          },
+        },
+      });
+    </script>
+
+    <!-- /* skript link  работа меню при изменении экрана 768рх*/ -->
+    <script>
+    let menu = document.querySelector('#menu-btn');   /* переменная с классом меню-бтн*/
+    let navbar = document.querySelector('.navbar');   /* переменная с классом навбар*/
+
+    menu.onclick = () => {                      /* при клике открывается меню*/
+        menu.classList.toggle('fa-times');      /* при клике на меню появляется крестик*/
+        navbar.classList.toggle('active');      /* при клике на крестик появляется меню*/
+    }
+    </script>
+
+    <script>
+      document.querySelectorAll('.img-container img').forEach(img =>{
+        img.onclick = () => {
+            document.querySelector('.pop-up').style.display = 'block';
+            document.querySelector('.pop-up img').src = img.getAttribute('src');
+  }
+});
+
+      document.querySelector('.pop-up span').onclick = () => {
+      document.querySelector('.pop-up').style.display = 'none';
 }
-</script>
+    </script>
 
-</body>
+
+    <!-- Custom script file  -->
+    <script src="script.js"></script>
+  </body>
 </html>

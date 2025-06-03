@@ -1,418 +1,665 @@
-* {                             
+* {                             /* универсальный селектор*/
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
     line-height: 1.3;
-    text-transform: none;          
+    /* text-transform: capitalize;  каждая первая буква большая */
+    text-transform: none;          /* отмена всех трансформаций текста*/
     border: 0;
     outline: 0;
+    /* font-family: 'Sniglet', sans-serif; */
     font-family: 'Bree Serif', sans-serif;
+       
 }
 
 html {
-    font-size: 62.5%;             
-    overflow-x: hidden;           
-    scroll-behavior: smooth;      
+    font-size: 62.5%;             /* использование единиц rem*/
+    overflow-x: hidden;           /* по горизонтали*/
+    scroll-behavior: smooth;      /* smooth плавное поведение прокрутки*/
     scroll-padding-top: 7rem;
 }
 
 img {
-    max-width: 100%;         
+    max-width: 100%;    /* максимальная ширина 100%*/       
 }
 
 :root {
-    --white-clr1: #f2f2f2;    
-    --green-clr: #1d418c;        
-    --white-clr: #f9c80c;        
-    --box-shadow: 0 .8rem 1rem rgba(0,0,0,.7);     
-    --logo-fz: calc(18px + (30 - 18) * ((100vw - 300px) / (1600 - 300)));        
-    --biggest-fz: calc(30px + (80 - 30) * ((100vw - 300px) / (1600 - 300)));     
-    --large-fz: calc(20px + (35 - 20) * ((100vw - 300px) / (1600 - 300)));       
-    --medium-fz: calc(14px + (20 - 14) * ((100vw - 300px) / (1600 - 300)));      
-    --small-fz: calc(12px + (18 - 12) * ((100vw - 300px) / (1600 - 300)));       
-    --number-icons: calc(25px + (40 - 25) * ((100vw - 300px) / (1600 - 300)));   
+  --black: #000;
+    /* --green-clr: #19a846; */    /* ключевой цвет зеленый*/
+    --white: #fff;  /* цвет белый фон и шоифты хедера*/
+    --blue: #1d418c;  /* замена ключевой цвет синий*/
+    /* --blue: #0663a2; */
+    --yellow: #f9c80c;        /* замена цвет желтый фон шрифты текст*/
+    --red: #f96900;
+    --grey: #ddd;
+    --body: #fff4e3;
+    --box-shadow: 0 .8rem 1rem rgba(0,0,0,.7);     /* переменная тени размытие и области просмотра*/
+    --logo-fz: calc(18px + (30 - 18) * ((100vw - 300px) / (1600 - 300)));        /* хедер лого размер шрифта и области просмотра*/
+    --biggest-fz: calc(30px + (60 - 30) * ((100vw - 300px) / (1600 - 300)));     /* самый большой размер шрифта и области просмотра*/
+    --large-fz: calc(15px + (25 - 15) * ((100vw - 300px) / (1600 - 300)));       /* мах средний размер шрифта и области просмотра*/
+    --medium-fz: calc(12px + (18 - 12) * ((100vw - 300px) / (1600 - 300)));      /* мин среднийразмер шрифта средний и области просмотра*/
+    --small-fz: calc(12px + (18 - 12) * ((100vw - 300px) / (1600 - 300)));       /* самый малый размер шрифта и области просмотра*/
+    --number-icons: calc(25px + (40 - 25) * ((100vw - 300px) / (1600 - 300)));   /* размер иконок области просмотра*/
 }
 
-
+/* Вид полосы прокрутки браузера начало ссылка: CSS Scrollbar Selectors: https://https://codingwithtopchiy.github.io/scrollbar.selectors.github.io/ */
 body {
-    --sb-track-color: #d7d7d8;         
-    --sb-thumb-color: #1d418c;      
-    --sb-size: 1.2rem;                
-    background: #fff4e3;          
+    /* --sb-track-color: #222; */
+    --sb-track-color: #d7d7d8;         /* цвет трека*/
+    /* --sb-thumb-color: #19a846; */  
+    --sb-thumb-color: #1d418c;      /* цвет бегунка*/
+    --sb-size: 1.2rem;                /* ширина бегунка*/
+    /* min-height: 200vh;                минимальная высота */
+    background: var(--body);            /* цвет header основного фона*/   
 }
-
-body::-webkit-scrollbar {             
+body::-webkit-scrollbar {             /* вся полоса прокрутки*/
     width: var(--sb-size);
 }
-
-body::-webkit-scrollbar-track {       
+body::-webkit-scrollbar-track {       /* дорожка (индикатор выполнения) полосы прокрутки*/
     background: var(--sb-track-color);
     border-radius: 1rem;
 }
-
-body::-webkit-scrollbar-thumb {        
+body::-webkit-scrollbar-thumb {        /* перетаскиваемый маркер прокрутки*/
     background: var(--sb-thumb-color);
     border-radius: 1rem;
 }
+/* Вид полосы прокрутки браузера конец*/
+
 
 section {
-    padding: 2rem 9%;                    
+    padding: 2rem 5%;                    /* все секции отступ сверху и снизу 2рем справа и слева 9%*/
+}
+
+/* КНОПКИ вех секций стили */
+.btn {                  /* стили кнопок для все секций*/
+    display: inline-block;              /* кнопокb d dblt ,kjrjd для все секций*/
+    margin: 1rem 1.5rem 0rem;           /* отступ кнопок для все секций*/
+    border-radius: 5rem;                /* скругление углов кнопок для все секций*/
+    color: var(--blue);            /* цвет синий надписи кнопок для все секций*/
+    background-color: var(--yellow); /* цвет фона желтый кнопок для все секций*/
+    font-size: var(--medium-fz);        /* размер шрифта кнопок для все секций*/
+    padding: 1rem 3rem;                 /* отступы надписи сверху и снизу 1рем=16рх справа и слева 3рем=24рх кнопок для все секций*/
+    box-shadow: var(--box-shadow);      /* тень размытие снизу длч кнопок в секции*/
+    cursor: pointer;                    /* менялся курсор при наведении*/
+    transition: 0.3s;                   /* плавный переход при нажатии кнопок*/
+}
+.btn:hover {             /* при нажатии стили кнопок для все секций*/       
+    background-color: var(--blue); /* изменение цвета фона желтый на синий при нажатии кнопок*/
+
+   color: var(--yellow);            /* изменение цвета шрифта синий на желтый при нажатии кнопок*/
 }
 
 
-.btn {                  
-    display: inline-block;              
-    margin: 1rem 1.5rem 0rem;           
-    border-radius: 5rem;                
-    color: var(--green-clr);            
-    background-color: var(--white-clr); 
-    font-size: var(--medium-fz);        
-    padding: 1rem 3rem;                 
-    box-shadow: var(--box-shadow);      
-    cursor: pointer;                    
-    transition: 0.3s;                   
+/* ЗАГОЛОВОК h2 2типа стили */
+.heading {              /* стили заголовока 2типа*/
+    margin-bottom: 2.5rem;          /* внешний отступ снизу 2,5рем=20рх */
+    text-align: center;             /* выравнивание текста по центру внутри элемента*/
+    color: var(--yellow);        /* цвет желтый заголовка 2типа*/
+    font-size: var(--biggest-fz);   /* размер шрифта самый большой заголовка 2типа*/
+    box-shadow: var(--box-shadow);
 }
-
-.btn:hover {                
-    background-color: var(--green-clr); 
-    color: var(--white-clr);            
-}
-
-.heading {              
-    margin-bottom: 2.5rem;          
-    text-align: center;             
-    color: var(--white-clr);        
-    font-size: var(--biggest-fz);   
-}
-
-.heading span {          
-    color: var(--green-clr);        
+.heading span {          /* спан заголовка 2типа*/
+    color: var(--blue);        /* цвет спана в заголовке 2типа*/
 }
 
 
+/* НАЧАЛО раздела header section START*/
 header {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    background: #f9c80c;            
+    background: var(--yellow);            /* цвет header ЗАГОЛОВКА*/
     width: 100%;
-    box-shadow: var(--box-shadow);    
-    display: flex;                    
-    justify-content: space-between;   
-    align-items: center;              
-    padding: 1rem 9%;                 
-    z-index: 99999999;                
+    box-shadow: var(--box-shadow);    /* тень размытие снизу полосы header ЗАГОЛОВКА*/
+    display: flex;                    /* размещение элементов в ряд один за одним header ЗАГОЛОВКА*/ 
+    justify-content: space-between;   /* размещение элементов по краям в разные стороны header ЗАГОЛОВКА*/
+    align-items: center;              /* элементы равномерно выровнялись header ЗАГОЛОВКА*/
+    padding: 1rem 4%;                 /* отступ элемнтов 1рем сверху и снизу и 9% справа и с лева header ЗАГОЛОВКА*/
+    z-index: 999999;                /* мах при прокручивании header ЗАГОЛОВКА оставался на месте перекрывал все секции*/
 }
 
+/* ЗАГОЛОВОК ЛОГО */
 header .logo {
+    /* font-size: var(--logo-fz);    размер шрифта логотипа header ЗАГОЛОВКА*/
     font-size: var(--small-fz);
-    color: var(--green-clr);      
+    color: var(--blue);      /* цвет синий логотипа header ЗАГОЛОВКА*/
 }
-
 header .logo .fa-tooth {
-    color: var(--white-clr);      
+    color: var(--yellow);      /* цвет зуба замена белый на желтый логотипа header ЗАГОЛОВКА*/ 
     font-size: var(--logo-fz);
 }
 
+/* СПИСОК HEADER */
 header .navbar {
-    display: flex;           
+    display: flex;           /* размещение кнопок в ряд один за одним header ЗАГОЛОВКА*/ 
 }
-
 header .navbar li {
-    margin: 0rem 1.5rem;      
+    margin: 0rem 1.5rem;     /* отступ сверху и снизу 0рем, справа и слева1,5рем header ЗАГОЛОВКА*/ 
 }
-
 header .navbar li a {
-    font-size: var(--medium-fz);   
-    color: var(--white-clr1);       
-    transition: 0.3s;              
-    padding: 0.7rem;                
-    background:               
-    linear-gradient(#1d418c 0 0) 0 0,      
+    font-size: var(--medium-fz);  /* размер шрифта средний переменная значение медиум header ЗАГОЛОВКА*/ 
+    color: var(--white);      /* цвет белый шрифта постоянной header ЗАГОЛОВКА*/  
+    transition: 0.3s;              /* плавный переход кнопки header ЗАГОЛОВКА*/
+    padding: 0.7rem;                /* отступ по 0,7рем header ЗАГОЛОВКА*/
+    /*элементы Ковер Эффект cover effect */
+    background:               /* фон полосок при нажатии header ЗАГОЛОВКА*/
+    /* linear-gradient(#19a846 0 0) 0 0,
+    linear-gradient(#19a846 0 0) 0 0,
+    linear-gradient(#19a846 0 0) 100% 100%,
+    linear-gradient(#19a846 0 0) 100% 100%; */
+    linear-gradient(#1d418c 0 0) 0 0,      /* линейный градиент header ЗАГОЛОВКА*/
     linear-gradient(#1d418c 0 0) 0 0,
     linear-gradient(#1d418c 0 0) 100% 100%,
     linear-gradient(#1d418c 0 0) 100% 100%;
-    background-repeat: no-repeat;                
-    background-size: 1.5rem .2rem, .2rem 1.5rem; 
+    background-repeat: no-repeat;                /* чтобы цвет не повторялся header ЗАГОЛОВКА*/
+    background-size: 1.5rem .2rem, .2rem 1.5rem;  /* размер уголков header ЗАГОЛОВКА*/
 }
-    
+    /* сам Ковер Эффект cover effect */
 header .navbar li a:hover {
-    color: var(--green-clr);     
-    background-position: 100% 0%, 0% 100%, 0% 100%, 100% 0%;      
+    color: var(--blue);     /* цвет синий уголков header ЗАГОЛОВКА*/
+    background-position: 100% 0%, 0% 100%, 0% 100%, 100% 0%;      /* движение уголков header ЗАГОЛОВКА*/
 }
 
-#menu-btn {                         
-    color: var(--green-clr);        
-    font-size: var(--medium-fz);    
-    cursor: pointer;                
-    border: .1rem solid var(--green-clr);   
-    padding: 0.5rem 1.5rem;                 
-    border-radius: 0.5rem;           
-    display: none;                 
+#menu-btn {                         /* при адаптации индитификатор меню батон = header ЗАГОЛОВКА*/
+    color: var(--blue);        /* цвет индитификатора меню батон =*/
+    font-size: var(--medium-fz);    /* размер индитификатора меню батон =*/
+    cursor: pointer;                /* менялся курсор при наведении на индитификатор меню батон =*/
+    border: .1rem solid var(--blue);   /* граница сплошная 1рем и цвет индитификатора синий*/
+    padding: 0.5rem 1.5rem;                 /* отступы 0,5рем=8рх сверху и снизу 1,5рем=24рх справа и с лева*/
+    border-radius: 0.5rem;         /* скругление углов со всех сторон индитификатора меню батон =*/        
+    display: none;                 /* чтобы скрыть = изменяется при изменение размера экрана*/
 }
 
 
+/* КОНЕЦ раздела header section END */
+
+
+/* НАЧАЛО секции домашнего раздела home section START  */
 .home {
-    margin-top: 7rem; 
-}                      
+    margin-top: 7rem;                   /* От верхнего края отступ сверху 7рем=112рх*/
+}
 .home .row {
     display: flex;
     align-items: center;
-    flex-wrap: wrap-reverse;     
-    gap: 1.5rem;                 
+    flex-wrap: wrap-reverse;     /* при сужении ширины области просмотра элементы шли вертикально*/
+    gap: 1.5rem;                 /* отступы между элементами 1,5рем=24рх*/
 }
 .home .row .content {
     flex: 1 1 40rem;
-    text-align: center;           
+    text-align: center;           /* размещение по центру*/
 }
-.home .row .content h3 {        
-    margin-bottom: 1rem;          
-    color: var(--green-clr);       
-    font-size: var(--biggest-fz);  
+.home .row .content h3 {      /* заголовок 3типа*/   
+    margin-bottom: 1rem;           /* отступ снизу для загаловка 3типа*/
+    color: var(--blue);       /* цвет для загаловка 3типа*/
+    font-size: var(--biggest-fz);  /* --Самый большой размер шрифта для загаловка 3типа  */
 }
-.home .row .content p {       
-    margin-bottom: 1.5rem;               
-    color: var(--green-clr);            
-    font-size: var(--small-fz);         
-    text-align: center;                
+.home .row .content p {       /* <p> параграф СТАРТ сам текст*/ 
+    margin-bottom: 1.5rem;              /* отступ снизу 1,5рем=24рх для параграфа*/ 
+    color: var(--blue);            /* цвет текста для параграфа*/ 
+    /* font-size: var(--medium-fz); */
+    font-size: var(--small-fz);         /* размер текста самый малый для параграфа*/ 
+    /* text-align: justify; */          /* по ширине текст от левого до правого края параграфа*/
+    /* text-align: left;                   по левому краю текста для параграфа  */ 
+    text-align: center;                 /* по центру текст от левого до правого края параграфа*/
+    
 }
-.home .row .content p span {          
-    color: var(--green-clr);        
+.home .row .content p span {          /* спам заголовка 2типа*/
+    color: var(--blue);        /* цвет спана синий в заголовке 2 типа*/
+    /* text-decoration: underline; */
 }
-.home .row .img {                    
+.home .row .img {                    /* размещение фото GS START фото Сюзан Гёрген */
     flex: 1 1 40rem;
-    text-align: center;             
+    text-align: center;             /*  размещение по центру */
     box-shadow: var(--box-shadow);
-    border-radius: 0%;                  
-    border: .5rem solid var(--green-clr); 
-    object-fit: cover;                    
+    border-radius: 0%;                  /*  размер углов 50% получается овал изображения */
+    border: .5rem solid var(--blue); /* обводка 0,5рем=4рх овал изображения цвет синий */
+    object-fit: cover;                    /* как <img> изменяется и подстраиваться под заданные размеры */
 }
 .home .row .content a {
     text-decoration: underline;
-    color: var(--green-clr);
+    /* color: var(--white); */
 }
+/* КОНЕЦ секции домашнего раздела home section END  */
 
 
+/* НАЧАЛО секции 4БОКСА number section START */
+.number .box-container {                   /* размещение всех четырёх боксов в секции 4бокса*/
+    display: flex;                         /* размещение всех один за одним в секции 4бокса*/
+    justify-content: center;               /* размещение всех по центру в секции 4бокса*/
+    align-items: center;                   /* размещение всех по центру в секции 4бокса*/
+    flex-wrap: wrap;                       /* флекс-элементам wrap разрешить перенос в секции 4бокса*/
+    gap: 2rem;                             /* отступы между боксами 2рем=32рх в секции 4бокса*/
+}
+.number .box-container .box {              /* размещение одного бокса в контейнере 4боксов*/
+    flex: 1 1 25rem;                       /* размещение 1 бокса: flex-grow 1 свободное flex-shin 1 свободное  flex-basis 25rem=400px размер*/
+    background: var(--blue);          /* цвет синий одного бокса в контейнере 4боксов*/
+    display: flex;                         /* элемент становится флекс-контейнером, внутри флекс-элементы */
+    justify-content: center;               /* размещение элементов в одном боксе в контейнере 4боксов*/
+    align-items: center;                   /* все элементы по центру поперечной оси выравниванием по вертикали в одном боксе в контейнере 4боксов*/
+    padding: 2rem;                         /* внутренние отступы со все сторон 2рем=16рх одном боксе */
+    border-radius: 0.5rem;                 /* скругление углов одного бокса 2рем=16рх в контейнере 4боксов*/
+    gap: 2rem;                             /* отступ между иконкой и текстом 2рем=16рх одном боксе */
+    box-shadow: var(--box-shadow);         /* /* тень размытие снизу для боксов в контейнере 4боксов*/
+}
+.number .box-container .box i {                   /* иконки в одном боксе в контейнере 4боксов*/
+    font-size: var(--number-icons);       /* размер иконок в одном боксе в контейнере 4боксов*/
+    color: var(--yellow);              /* цвет желтый иконок в одном боксе в контейнере 4боксов*/
+}
+.number .box-container .box .content {            /* текст в одном боксе в контейнере 4боксов*/
+    font-size: var(--medium-fz);          /* размер шрифта в одном боксе в контейнере 4боксов*/
+    color: var(--yellow);              /* цвет шрифта в одном боксе в контейнере 4боксов*/
+}
+/* КОНЕЦ секции 4БОКСА number section END  */
 
-.number .box-container {                   
-    display: flex;                        
-    justify-content: center;               
-    align-items: center;                   
-    flex-wrap: wrap;                      
-    gap: 2rem;                             
-}
-.number .box-container .box {              
-    flex: 1 1 25rem;                       
-    background: var(--green-clr);          
-    display: flex;                         
-    justify-content: center;               
-    align-items: center;                   
-    padding: 2rem;                         
-    border-radius: 0.5rem;                 
-    gap: 2rem;                             
-    box-shadow: var(--box-shadow);         
-}
-.number .box-container .box i {                   
-    font-size: var(--number-icons);      
-    color: var(--white-clr);              
-}
-.number .box-container .box .content {            
-    font-size: var(--medium-fz);          
-    color: var(--white-clr);              
-}
 
-
-.about {                                 
-    margin-top: 7rem;                   
+/* НАЧАЛО секция О НАС Über uns about section START */
+.about {                                 /* Секция с индитификатором О НАС Über uns about section stat  */
+    margin-top: 3rem;                    /* внешний отступ сверху внутри блока до фото 7рем=48рх */
 }
-.about .row {                            
-    display: flex;                       
-    align-items: center;                
-    flex-wrap: wrap;                     
-    gap: 2.5rem;                         
+.about .row {                            /* div с классом row */
+    display: flex;                       /* элемент становится флекс-контейнером, внутри флекс-элементы */
+    align-items: center;                 /* все элементы по центру поперечной оси выравниванием по вертикали */
+    flex-wrap: wrap;                     /* флекс-элементам переноситься на новые строки wrap разрешить перенос*/
+    gap: 2.5rem;                         /* отступ между элементами внутри флекса 2,5рем=40рх  */
 }
 .about .row .img {
-    flex: 1 1 40rem;                    
+    flex: 1 1 40rem;                     /* размер изображения в секция О НАС Über uns */
 }
 .about .row .img img {
+    /* border-radius: 50%; */             /* размер углов 50% получается овал изображения  */
     border-radius: 0%;                   
-    border: .5rem solid var(--green-clr); 
-    object-fit: cover;                    
+    border: .5rem solid var(--blue); /* рамка 0,5рем=4рх овал изображения цвет синий  */
+    object-fit: cover;                    /* как <img> изменяется и подстраиваться под заданные размеры. */
     box-shadow: var(--box-shadow);
 }
-.about .row .content {                    
-    flex: 1 1 40rem;                     
-    color: var(--green-clr);             
+.about .row .content {                   /* div с классом текст */ 
+    flex: 1 1 40rem;                     /* роазмещение в ряд с переносом фото ушло влево текст вправо кнопка в перенос справа*/
+    color: var(--blue);             /* цвет всего текста в секция О НАС Über uns*/
 }
-.about .row .content h3 {                
-    font-size: var(--biggest-fz);        
-    color: var(--green-clr);            
+.about .row .content h3 {                /*  заголовок 3типав секция О НАС Über uns*/
+    font-size: var(--biggest-fz);        /*  размер шрифта самый большой заголовка 3типа в секция О НАС */
+    color: var(--blue);             /*  цвет заголовка синий заголовка 3типа в секция О НАС Über uns*/
 }
-.about .row .content p {                 
-    font-size: var(--small-fz);           
+.about .row .content p {                 /*  <p> параграф О нас сам текст */
+    /* font-size: var(--medium-fz);           */
+    font-size: var(--small-fz);         /* размер текста самый малый для параграфа*/ 
+    margin-bottom: 2rem;                /* отступ снизу 2рем=16рх для  параграфа */  
     text-align: center;
 }
+/* КОНЕЦ секция О НАС Über about section END  */
 
 
-.services .slide {                  
-    width: 30rem;                       
-    background-color: var(--white-clr1); 
-    border-radius: 0.5rem;              
-    text-align: center;                 
-    margin-bottom: 4rem;                
-    box-shadow: var(--box-shadow);      
-}
-.services .slide img {           
-    height: 25rem;            
-    border: .5rem solid var(--green-clr);
-}
-.services .slide h4 {             
-    margin: 1.5rem 0rem;       
-    font-size: var(--large-fz); 
-}
-.services .slide p {      
-    font-size: var(--small-fz);       
-    text-align: justify;              
-}
-.swiper-pagination-bullet-active {      
-    background-color: var(--green-clr) !important;    
-}
-
-
-.doctors .slide {                       
-    width: 30rem;                       
-    background-color: var(--white-clr1); 
-    border-radius: 0.5rem;              
-    text-align: center;                 
-    margin-bottom: 4rem;                
-    box-shadow: var(--box-shadow);       
+/* НАЧАЛО секции НАША ПРАКТИКА Unsere Praxis section START */
+.doctors .slide {                       /* стили одного элемента слайда в слайдере*/ 
+  width: 30rem;                       /* ширина одного слайда 30рем=480рх  в слайдере*/
+  background-color: var(--yellow); /* фон слайда с переменной желтого цвета */
+  border-radius: 0.5rem;              /* скругление углов 0,5рем=4рх слайда*/
+  text-align: center;                 /* выравнивание контента по центру */
+  margin-bottom: 4rem;                /* внешний отступт снизу элемента между слайдами*/
+  box-shadow: var(--box-shadow);      /* переменная внтени размытие для слайда*/ 
+  /* padding: 1rem;                      внутрений отступ от грациц элемента 1рем=8рх */
 }
 .doctors .slide img {
-    height: 23rem;                      
-    width: 35rem;                       
-    object-fit: cover;                   
-    border: .5rem solid var(--green-clr);  
+  height: 30rem;                       /* высота фотокартинки 25рем=400рх*/
+  width: 35rem;                        /* ширина фотокартинки 25рем=400рх*/
+  /* border-radius: 50%;  */                /* скругление углов 50% фотокартинки круг */
+  object-fit: cover;                   /* без нарушения пропорций фотокартинку обрезая всё ненужное */
+  border-radius: 0.5rem;
+  border: .5rem solid var(--blue);  /* рамка толщиной 0,5рем=4рх сплошная синего цвета*/
 }
 .doctors .slide h3 {
-    margin: 1.5rem 0rem;        
-    font-size: var(--large-fz); 
+  margin: 1.5rem 0rem;        /* внешний отступ сверху снизу 1,5рем=24рх справа слева 0рем=0рх*/
+  font-size: var(--large-fz); /* размер шрифта заголовка 3типа с переменной */
+  color: var(--blue); 
 }
-.doctors .slide p {              
-    font-size: var(--small-fz);  
-    text-align: center;          
-    padding: 1rem;              
+.doctors .slide p {              /* стили р параграфа элемента слайда*/
+  font-size: var(--small-fz);  /* размер шрифта текста самый малый с переменной */ 
+  text-align: center;          /* выравнивание текста по центру */ 
+  padding: 1rem;               /* внутрений отступ от грациц элемента 1рем=8рх*/
+  color: var(--blue); 
+}
+/* НАЧАЛО секции НАША ПРАКТИКА Unsere Praxis section END   */
+
+
+/* НАЧАЛО секции НАШИ СЕРВИСЫ Unsere Leistungen section START  */
+.services .slide {          /* стили одного элемента слайда в слайдере*/        
+    width: 30rem;                       /* ширина одного слайда 30рем=480рх  в слайдере*/
+    background-color: var(--yellow); /* фон слайда с переменной желтого цвета */
+    border-radius: 0.5rem;              /* скругление углов 0,5рем=4рх слайда*/
+    text-align: center;                 /* выравнивание контента по центру */
+    margin-bottom: 4rem;                /* внешний отступт снизу элемента между слайдами*/
+    /* padding: 1rem;                      внутрений отступ от грациц элемента 2рем=16рх */
+    box-shadow: var(--box-shadow);      /* переменная внтени размытие для слайда*/
+}
+.services .slide img {        /* стили изображения в слайде слайдера */   
+    height: 25rem;            /* высота фотокартинки 25рем=400рх*/
+    border-radius: 0.5rem;
+    border: .5rem solid var(--blue);
+}
+.services .slide h4 {         /* стили заголовка 4типа на слайде*/      
+    margin: 1.5rem 0rem;       /* внешний отступ сверху снизу 1,5рем=24рх справа слева 0рем=0рх*/
+    font-size: var(--large-fz); /* размер шрифта заголовка 4типа с переменной */
+}
+.services .slide p {      /* стили р параграфа элемента слайда*/
+    font-size: var(--small-fz);       /* размер шрифта текста самый малый с переменной */
+    text-align: justify;              /* равномерное выравнивание текста по ширине*/
+}
+/* SwiperJs link: https://swiperjs.com/ */
+.swiper-pagination-bullet-active {      /* стили переключателя слайдера для все секций*/
+    background-color: var(--blue) !important;    /* цвет синий переключателя слайдера плюс правило !important Уникальный модификатор, позволяющий применить значение свойства вопреки обычной специфичности и каскаду. Цвет переключателя будет синий из-за !important*/
+}
+/* КОНЕЦ секции НАШИ СЕРВИСЫ Unsere Leistungen section END  */
+
+
+/* НАЧАЛО1 секции НАШ КУРСПЛАН1 Unser Kursplan section START  */
+
+.services1 {
+  height: 80vh;
+  /* margin-top: 40rem; */
+  
+  /* gap: 2rem; */
+}
+
+.services1 .slide {          /* стили одного элемента слайда в слайдере*/ 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+
+  height: 30rem; 
+  width: 30rem;                       /* ширина одного слайда 30рем=480рх  в слайдере*/
+  
+  background-color: var(--yellow); /* фон слайда с переменной желтого цвета */
+  border-radius: 0.5rem;              /* скругление углов 0,5рем=4рх слайда*/
+  text-align: center;                 /* выравнивание контента по центру */
+  margin-bottom: 4rem; margin-bottom: 4rem;                /* внешний отступт снизу элемента между слайдами*/
+  /* padding: 1rem;                      внутрений отступ от грациц элемента 2рем=16рх */
+  box-shadow: var(--box-shadow);      /* переменная внтени размытие для слайда*/
+  overflow: hidden;
+  gap: 2rem;
 }
 
 
+
+.services1 .slide img {        /* стили изображения в слайде слайдера */   
+ /* height: 30rem;  */            /* высота фотокартинки 25рем=400рх*/
+  border-radius: 0.5rem;
+  border: .5rem solid var(--blue);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+  transition: .5s;
+}
+.services1 .slide:hover {
+  transform: scale(1.1);
+}
+
+/* SwiperJs link: https://swiperjs.com/ */
+.swiper-pagination-bullet-active {      /* стили переключателя слайдера для все секций*/
+  background-color: var(--blue) !important;    /* цвет синий переключателя слайдера плюс правило !important Уникальный модификатор, позволяющий применить значение свойства вопреки обычной специфичности и каскаду. Цвет переключателя будет синий из-за !important*/
+}
+/* КОНЕЦ1 секции НАШ КУРСПЛАН1 Unser Kursplan section END  */
+
+
+
+
+
+/* НАЧАЛО2 секции НАШ КУРСПЛАН2 Unser Kursplan section start   */
+/* .services2 {
+  width: 100%;
+   height: 100vh;
+} */
+/* .services2 .kursplan {  */         /* стили одного элемента слайда в слайдере*/   
+       
+   /*  width: 30rem; */                       /* ширина одного слайда 30рем=480рх  в слайдере*/
+    /* background-color: var(--yellow); */ /* фон слайда с переменной желтого цвета */
+    /* border-radius: 0.5rem;  */             /* скругление углов 0,5рем=4рх слайда*/
+    /* text-align: center;  */                /* выравнивание контента по центру */
+    /* margin-bottom: 4rem;    */             /* внешний отступт снизу элемента между слайдами*/
+    /* padding: 1rem;                      внутрений отступ от грациц элемента 2рем=16рх */
+    /* box-shadow: var(--box-shadow); */      /* переменная внтени размытие для слайда*/
+    /* cursor: pointer;
+    overflow: hidden;
+} */
+/* .services2  {
+  margin-top: 7rem; 
+} */
+.kursplan .img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+}
+.kursplan .img-container .img {
+  width: 250px;
+  height: 350px;
+  border-radius: 0.5rem;
+  border: 5px solid var(--blue);
+  box-shadow: var(--box-shadow);
+  overflow: hidden;
+}
+.kursplan .img-container .img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 0.5rem;
+  object-fit: cover;
+  cursor: pointer;
+  transition: .5s;
+}
+.kursplan .img-container .img:hover {
+  transform: scale(1.1);
+}
+
+.kursplan .pop-up {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,.8);
+  display: none;
+  z-index: 99999999; 
+}
+.kursplan .pop-up img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 5px solid var(--white);
+  border-radius: 8px;
+  width: 570px;
+}
+
+.kursplan .pop-up span {
+  position: fixed;
+  top: 10px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  background: #fff;
+  font-size: 50px;
+  font-weight: 900;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+
+/* .services2 .slide h4 {  */        /* стили заголовка 4типа на слайде*/      
+    /* margin: 1.5rem 0rem;  */      /* внешний отступ сверху снизу 1,5рем=24рх справа слева 0рем=0рх*/
+    /* font-size: var(--large-fz); */ /* размер шрифта заголовка 4типа с переменной */
+/* }
+.services2 .slide p {   */    /* стили р параграфа элемента слайда*/
+   /*  font-size: var(--small-fz);   */     /* размер шрифта текста самый малый с переменной */
+    /* text-align: justify;  */             /* равномерное выравнивание текста по ширине*/
+/* } */
+
+/* SwiperJs link: https://swiperjs.com/ */
+.swiper-pagination-bullet-active {      /* стили переключателя слайдера для все секций*/
+    background-color: var(--blue) !important;    /* цвет синий переключателя слайдера плюс правило !important Уникальный модификатор, позволяющий применить значение свойства вопреки обычной специфичности и каскаду. Цвет переключателя будет синий из-за !important*/
+}
+/* КОНЕЦ2 секции НАШ КУРСПЛАН2 Unser Kursplan section end  */
+
+
+
+
+
+
+
+
+/* Начало секции НАША ПРАКТИКА2 Unsere Praxis doctors section start */
+.doctors2 .slide {                       /* стили одного элемента слайда в слайдере*/ 
+  width: 30rem;                       /* ширина одного слайда 30рем=480рх  в слайдере*/
+  background-color: var(--yellow); /* фон слайда с переменной желтого цвета */
+  border-radius: 0.5rem;              /* скругление углов 0,5рем=4рх слайда*/
+  text-align: center;                 /* выравнивание контента по центру */
+  margin-bottom: 4rem;                /* внешний отступт снизу элемента между слайдами*/
+  box-shadow: var(--box-shadow);      /* переменная внтени размытие для слайда*/ 
+  /* padding: 1rem;                      внутрений отступ от грациц элемента 1рем=8рх */
+  padding: 1rem; 
+}
+.doctors2 .slide img {
+  height: 25rem;                       /* высота фотокартинки 25рем=400рх*/
+  width: 25rem;                        /* ширина фотокартинки 25рем=400рх*/
+  border-radius: 50%;                 /* скругление углов 50% фотокартинки круг */
+  object-fit: cover;                   /* без нарушения пропорций фотокартинку обрезая всё ненужное */
+  border: .5rem solid var(--blue);  /* рамка толщиной 0,5рем=4рх сплошная синего цвета*/
+}
+.doctors2 .slide h3 {
+  margin: 1.5rem 0rem;        /* внешний отступ сверху снизу 1,5рем=24рх справа слева 0рем=0рх*/
+  font-size: var(--large-fz); /* размер шрифта заголовка 3типа с переменной */
+  color: var(--blue); 
+}
+/* .doctors2 .slide p {             
+  font-size: var(--small-fz);   
+  text-align: center;     
+  padding: 1rem;          
+  color: var(--blue); 
+} */
+/* Конец секции НАША ПРАКТИКА2 Unsere Praxis doctors section end  */
+
+
+/*  Начало секции НАШ ОБЗОР review section start  */
 .review .slide {
-    width: 35rem;                      
-    border-radius: 0.5rem;              
-    background-color: var(--white-clr);  
-    padding: 2rem;                       
-    margin-bottom: 4rem;                 
+    width: 35rem;                       /* ширина слайда 35рем=560рх*/
+    border-radius: 0.5rem;              /* скругление углов 0,5рем=4рх слайда*/
+    background-color: var(--yellow);  /* фон слайда с переменной белого цвета */
+    padding: 2rem;                       /* внутрений отступ от грациц элемента 2рем=16рх*/
+    margin-bottom: 4rem;                 /* внешний отступт снизу элемента между слайдами*/
     text-align: center;
+    box-shadow: var(--box-shadow);
      
 }
 .review .slide h4 {
     font-size: var(--large-fz);
-    color: var(--green-clr);
+    color: var(--blue);
 }
 .review .slide p {
-    font-size: var(--small-fz);           
-    color: var(--green-clr);
+    font-size: var(--small-fz);      /* размер шрифта текста самый малый с переменной */      
+    color: var(--blue);
     text-align: center;
 }
 .review .slide a {
-    font-size: var(--small-fz);          
-    color: var(--green-clr);
+    font-size: var(--small-fz);      /* размер шрифта текста самый малый с переменной */      
+    color: var(--blue);
     text-align: center;
     text-decoration: underline;
 }
-.review .slide .user {       
-    display: flex;                   
-    align-items: center;             
-    gap: 1.5rem;                    
-    margin-top: 1.5rem;              
+.review .slide .user {       /* стили блока пользователь в слайде секции НАШ ОБЗОР  */ 
+    display: flex;                   /* элемент становится флекс-контейнером, внутри флекс-элементы */
+    align-items: center;             /* все элементы по центру поперечной оси выравниванием по вертикали */
+    gap: 1.5rem;                     /* отступ между элементами внутри флекса 1,5рем=24рх  */
+    margin-top: 1.5rem;              /* внешний отступ сверху внутри блока 1,5рем=24рх */
     justify-content: center;
 }
-.review .slide .user img {    
-    width: 7rem;                      
-    height: 7rem;                   
-    object-fit: cover;              
+.review .slide .user img {   /* стили фотокартинки в слайде секции НАШ ОБЗОР  */ 
+    width: 7rem;                    /* ширина фотокартинки 7рем=112рх*/  
+    height: 7rem;                   /* высота фотокартинки 7рем=112рх*/
+    /* border-radius: 50%;             скругление углов фотокартинки 50% круг */
+    object-fit: cover;              /* без нарушения пропорций фотокартинку обрезая всё ненужное */
 }
-.review .slide .user h4 {         
-    font-size: var(--small-fz);     
+.review .slide .user h4 {     /* стили заголовка 4типа  */    
+    font-size: var(--small-fz);     /* размер шрифта заголовка 4типа с переменной */
 }
-.review .slide .user-info .stars i {  
-    font-size: 1.5rem;                      
-    color: var(--green-clr);                
+.review .slide .user-info .stars i {  /* стили иконок стар в слайде секции НАШ ОБЗОР  */
+    font-size: 1.5rem;                      /* разиер иконок стар в блоке пльзователь */
+    color: var(--blue);                /* цвет синий иконок стар в блоке пльзователь */
+    
 }
+/* Конец секции НАШ ОБЗОР review section end  */
 
 
+/* Начало секции КАК С НАМИ СВЯЗАТЬСЯ contacts section start  */
 .contacts .row {
-    display: flex;                      
-    align-items: center;                
-    flex-wrap: wrap;                    
-    gap: 2.5rem;                      
+    display: flex;                      /* элемент становится флекс-контейнером, внутри флекс-элементы */
+    align-items: center;                /* все элементы по центру поперечной оси выравниванием по вертикали */
+    flex-wrap: wrap;                    /* флекс-элементам переноситься на новые строки wrap разрешить перенос*/
+    gap: 2.5rem;                        /* отступ между элементами внутри флекса 2,5рем=40рх  */
+    
 }
 .contacts .row .img {
-    flex: 1 1 40rem;    
+    flex: 1 1 40rem;    /* управление размерами флекс-элемента для адаптации изображения*/
+    box-shadow: var(--box-shadow);
 }
 .contacts .row form {
-    flex: 1 1 40rem;    
+    flex: 1 1 40rem;    /* свойство переноса и направления 1, сжиматие, если места мало 1, базовый размер 40рем=640рх */
 }
 .contacts .row form .box {
-    width: 100%;                        
-    margin: 1rem 0rem 2rem;             
-    border-radius: 0.5rem;              
-    background-color: var(--white-clr); 
-    font-size: var(--small-fz);         
-    padding: 0.5rem 1rem;       
-    text-transform: none;       
+    width: 100%;                        /* ширина бокса 100% */
+    margin: 1rem 0rem 2rem;             /* внешний отступ сверху 1рем справа и слева 0 снизу 2рем */
+    border-radius: 0.5rem;              /* скругление углов 0,5рем=4рх */
+    background-color: var(--yellow);  /* фон поля с переменной желтого цвета */
+    font-size: var(--small-fz);         /* размер шрифта текста самый малый с переменной */ 
+    padding: 0.5rem 1rem;       /* внутрений отступ от грациц справа слева 0,5рем=8рх верху снизу 1рем*/ 
+    text-transform: none;       /* отмена всех трансформаций текста*/
 }
 .contacts .row form textarea.box {
-    height: 15rem;            
-    resize: none;             
+    height: 15rem;            /* высота поля ввода 15рем=240рх*/
+    resize: none;             /* размеры поля ввода none — изменить нельзя */
 }
 .contacts .row form span {
-    font-size: var(--small-fz);    
-    color: var(--green-clr);           
+    font-size: var(--small-fz);   /* размер текста спана синий указателя*/ 
+    color: var(--yellow);      /* цвет желтый текста спана  указателя*/      
 }
 .contacts .row form .gender {
-    margin: 1rem 0rem 2rem;               
+    margin: 1rem 0rem 2rem;               /* внешний отступ сверху 1рем справа и слева 0 снизу 2рем */
 }
 .contacts .row form .gender label {
-    margin-left: 0.2rem;                
-    font-size: var(--small-fz);          
-    color: var(--green-clr);            
+    margin-left: 0.2rem;                /* внешний отступ кнопки от границы слева 0,2рем=8рх */
+    font-size: var(--small-fz);         /* размер шрифта надписи самый малый с переменной */ 
+    color: var(--blue);            /* цвет синий шрифта */
     cursor: pointer;
 }
-.contacts .row form .gender #female {   
-    margin-left: 2rem;                   
+.contacts .row form .gender #female {    /* обращение к индедифиратору #female */
+    margin-left: 2rem;                   /* внешний отступ слева кнопки от надписи 2рем=32рх */
 }
 .contacts .row form .gender input {
     appearance: none;
     width: 1.5rem;
     height: 1.5rem;
     border-radius: 50%;
-    background-color: var(--white-clr); 
+    background-color: var(--yellow); 
     cursor: pointer;
     transition: 0.3s;
 }
 .contacts .row form .gender input:checked {
-    background-color: orangered;
+    background-color: var(--red);
     border-radius: 50%;
 }
 .contacts .row form .gender #female:checked ~ label[for=male] {
     color: orangered;
 }
+/* Конец секции КАК С НАМИ СВЯЗАТЬСЯcontacts section end  */
 
 
-
-
+/* Начало секции footer section start */
 footer {
     text-align: center;
     margin-top: 3rem;
@@ -423,9 +670,10 @@ footer .share a {
     height: 4.5rem;
     line-height: 4.5rem;
     border-radius: 50%;
+    border: 3px solid var(--blue);
     font-size: var(--medium-fz);
-    color: var(--green-clr);
-    background-color: var(--white-clr);
+    color: var(--blue);
+    background-color: var(--yellow);
     transition: 0.3s;
 }
 footer .share a:hover {
@@ -438,47 +686,111 @@ hr {
     margin: 2rem 0rem;
 }
 footer .copyright {
+    /* color: #ddd; */
     color: #e4ad48;
     font-size: var(--medium-fz);
 }
 footer .copyright span {
-    color: var(--green-clr);
+    color: var(--blue);
 }
 footer .copyright a {
-    color: #e4ad48;
+    color: var(--yellow);
     text-decoration: underline;
 }
+/* Конец секции footer section start  */
 
 
+/* НАЧАЛО блок секции с классом scroll top btn section start  */
+.scroll-top {
+  position: fixed;
+  right: 2rem;
+  bottom: 3rem;
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 0.2rem rgba(59, 56, 235, 0.2);
+  z-index: 100;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(3rem);
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+.scroll-top i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.8rem;
+  color: var(--blue);
+  transition: color 0.3s ease-in-out;
+}
+.scroll-top svg path {
+  fill: none;
+  stroke: var(--blue);
+  stroke-width: 4;
+  transition: stroke 0.3s ease-in-out;
+}
+.scroll-top.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+/* КОНЕЦ блок секции с классом scroll top btn section end */
 
 
+/* НАЧАЛО секции ПЕРЕЗАГРУЗКА loader start */
+.loader-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000000;
+  background: #FDFDFC;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999999;
+}
+.loader-container img {
+  height: 25rem;
+}
+.loader-container.active {
+  display: none;
+}
+/* КОНЕЦ секции ПЕРЕЗАГРУЗКА loader етв*/
+
+
+/* адаптация изменение размера экранаmedia queries  */
 @media (max-width: 950px) {
     header {
-        padding: 1rem 2rem;     
+        padding: 1rem 2rem;     /* отступ 1рем снизу и сверху и 2рем справа и слева*/
     }
 }
 @media (max-width: 768px) {           
-    #menu-btn {                            
+    #menu-btn {                  /* появление индитификатора меню батон =*/           
         display: block;
     }
     header .navbar {
-        position: absolute;      
+        position: absolute;      /* ширина самого меню при 768рх*/
         top: 99%;
         left: 0;
         right: 0;
         border-top: .1rem solid var(--white-clr);
         border-bottom: .1rem solid var(--white-clr);
         display: flex;
-        flex-direction: column;     
-        align-items: center;        
-        transition: 0.3s linear;    
-        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);   
+        flex-direction: column;     /* при изменении экрана 768рх меню вертикально*/
+        align-items: center;        /* при изменении экрана 768рх меню вертикально и по центру*/
+        transition: 0.3s linear;    /* плавный переход меню 0,3сек при изменении экрана 768рх*/
+        /* CSS clip-path maker: https://bennettfeely.com/clippy/ */
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);   /* трапеция выкл меню скрылось при изменении экрана 768рх*/
         background-color: #222;
     }
     header .navbar li {
-        margin: 2rem;           
+        margin: 2rem;           /* отступы 2рем меню поцентру при изменении экрана 768рх*/
     }
     header .navbar.active {
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); 
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); /* трапеция вкл меню открылось при изменении экрана 768рх*/
     }
 }
